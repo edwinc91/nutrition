@@ -1,0 +1,13 @@
+<h1> Welcome </h1>
+<% nutritions.forEach(function (nutrition, i) { %>
+  <div class = "thread">
+    <h3>
+      <a href="/day/<%= nutrition._id %>" class="threadName"><%= nutrition.time %> </a>
+    </h3>
+<% }) %>
+<h4>
+  <a class="btn btn-success" href="/day/new" role="button">Here's to a New Day</a>
+</h4>
+<h6>
+  <a class="btn btn-danger" href="/" role="button">Logout</a>
+</h6>

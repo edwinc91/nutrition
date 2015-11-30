@@ -1,0 +1,25 @@
+<div id="threadMaking">
+<form action="/dailychart" method="post">
+  <div class="form-group">
+    <label for="threadTitle">Consumed Goods</label>
+    <input type="text"
+           class="form-control"
+           id="threadTitle"
+           name="nutrition[food][]"
+           placeholder="What did I eat?">
+    <label for="threadBody">Nutrition</label>
+    <input type="text" class="form-control"
+              id="threadBody"
+              rows="6"
+              name="nutrition[nutrition]"
+              placeholder="0">
+  </div>
+  <input type="hidden"
+         name="nutrition[author]"
+         value="<%= author %>">
+  <button type="submit" class="btn btn-success">Share your Day!</button>
+</form>
+<h6>
+  Back to <a href="/dailychart">Homepage</a>
+</h6>
+</div>

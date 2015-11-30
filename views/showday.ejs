@@ -1,0 +1,14 @@
+<div id="specificthread">
+  <h3 class"threadTitle"> Foods: <%= nutrition.food %></h3>
+  <h3 class="threadBody">Calories: <%= nutrition.nutrition %></h3>
+  <h5 class="threadDate">Date Created: <%= nutrition.time %></h5>
+</div>
+<div>
+  <a class="btn btn-warning" href="/day/<%= nutrition._id %>/edit" role="button">Edit this Day</a>
+  <form action="/day/<%= nutrition._id %>?_method=DELETE"
+      method="post">
+  <button type="submit" class="btn btn-danger">Delete Day</button>
+  <br/>
+  <a href="/dailychart">Back to Homepage</a>
+  </form>
+</div>
