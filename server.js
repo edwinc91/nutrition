@@ -13,8 +13,16 @@ var express         = require('express'),
 
 var nutritionSchema = new Schema({
   author: { type: String, required: true },
-  food: [ String ],
-  nutrition: [ Number ],
+  food1: { type: String, required: true },
+  nutrition1: { type: Number, required: true },
+  food2: { type: String },
+  nutrition2: { type: Number },
+  food3: { type: String },
+  nutrition3: { type: Number },
+  food4: { type: String },
+  nutrition4: { type: Number },
+  food5: { type: String },
+  nutrition5: { type: Number },
   time: { type: Date, default: Date.now },
   caloriesAlloted: { type: Number },
   caloriesConsumed: { type: Number },
@@ -203,8 +211,8 @@ server.post('/dailychart', function (req, res) {
   var newNutrition = new Nutrition({
     // req.body.thread
     author: req.session.user.username,
-    food: req.body.nutrition.food,
-    nutrition: req.body.nutrition.nutrition,
+    food1: req.body.nutrition.food1,
+    nutrition1: req.body.nutrition.nutrition1,
     date: req.body.nutrition.date
   });
   newNutrition.save(function (err, newNutritionSaved) {

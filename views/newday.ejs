@@ -1,22 +1,24 @@
 <div id="threadMaking">
 <form action="/dailychart" method="post">
-  <div class="form-group">
+  <div class="form-group" id="nutritionForm">
     <label for="threadTitle">Consumed Goods</label>
     <input type="text"
            class="form-control"
            id="threadTitle"
-           name="nutrition[food][]"
+           name="nutrition[food1]"
            placeholder="What did I eat?">
-    <label for="threadBody">Nutrition</label>
+    <label for="threadBody">Calories</label>
     <input type="text" class="form-control"
               id="threadBody"
               rows="6"
-              name="nutrition[nutrition]"
+              name="nutrition[nutrition1]"
               placeholder="0">
   </div>
   <input type="hidden"
          name="nutrition[author]"
          value="<%= author %>">
+  <button type="button" class="addFood" class="btn btn-success">Add More Foodies</button>
+  <button type="button" class="removeFood" class="btn btn-failure">Remove Foodies</button>
   <button type="submit" class="btn btn-success">Share your Day!</button>
 </form>
 <h6>

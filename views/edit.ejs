@@ -1,0 +1,22 @@
+<div id="threadMaking">
+<form action="/day/<%= nutrition._id %>/edit?_method=PATCH" method="post">
+  <div class="form-group">
+    <label for="threadTitle">Consumed Goods</label>
+    <input type="text"
+           class="form-control"
+           id="threadTitle"
+           name="nutrition[food1]"
+           value="<%= nutrition.food %>">
+    <label for="threadBody">Nutrition</label>
+    <input type="text" class="form-control"
+              id="threadBody"
+              rows="6"
+              name="nutrition[nutrition1]"
+              value="<%= nutrition.nutrition %>">
+  </div>
+  <button type="submit" class="btn btn-success">Update your Day!</button>
+</form>
+<h6>
+  Back to <a href="/day/<%= nutrition._id %>">Day</a>
+</h6>
+</div>
