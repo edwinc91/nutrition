@@ -56,6 +56,18 @@ $(function() {
      totalCalories = parseInt(a)
    }
    console.log(totalCalories);
-   $(".calorieCount").text("Total Calories Consumed: " + totalCalories);
+   if (totalCalories >= 3000) {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    (づ￣ ³￣)づ");
+   } else if (totalCalories > 2500 && totalCalories < 3000) {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    (ಥ﹏ಥ)");
+   } else if (totalCalories > 2000 && totalCalories < 2501) {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    (ಠ_ಠ)");
+   } else if (totalCalories > 1750 && totalCalories < 2001) {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    ლ(´ڡ`ლ)");
+   } else if (totalCalories > 1500 && totalCalories < 1751) {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    ◕‿↼");
+   } else {
+     $(".calorieCount").text("Total Calories Consumed: " + totalCalories + "    ◕‿◕");
+   }
  });
 });
