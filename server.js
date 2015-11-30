@@ -26,7 +26,7 @@ var nutritionSchema = new Schema({
   time: { type: Date, default: Date.now },
   caloriesAlloted: { type: Number },
   caloriesConsumed: { type: Number },
-  totalCalories: { type: Number }
+  totalCalories: 0
 }, {collection: 'nutrition_list', strict: true});
 
 var Nutrition = mongoose.model(null, nutritionSchema);
@@ -101,7 +101,8 @@ server.get('/day/:id/edit', function (req, res) {
 });
 
 server.patch('/day/:id/edit', function (req, res) {
-  var nutritionEdit = req.body.thread;
+  var nutritionEdit = req.body.nutrition;
+  console.log(req)
 
   Nutrition.findByIdAndUpdate(req.params.id, nutritionEdit, function (err, updatedNutrition) {
     if (err) {
@@ -213,6 +214,14 @@ server.post('/dailychart', function (req, res) {
     author: req.session.user.username,
     food1: req.body.nutrition.food1,
     nutrition1: req.body.nutrition.nutrition1,
+    food2: req.body.nutrition.food2,
+    nutrition2: req.body.nutrition.nutrition2,
+    food3: req.body.nutrition.food3,
+    nutrition3: req.body.nutrition.nutrition3,
+    food4: req.body.nutrition.food4,
+    nutrition4: req.body.nutrition.nutrition4,
+    food5: req.body.nutrition.food5,
+    nutrition5: req.body.nutrition.nutrition5,
     date: req.body.nutrition.date
   });
   newNutrition.save(function (err, newNutritionSaved) {

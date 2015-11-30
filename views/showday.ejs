@@ -1,8 +1,23 @@
 <div id="specificthread">
-  <h3 class"threadTitle"> Foods: <%= nutrition.food %></h3>
-  <h3 class="threadBody">Calories: <%= nutrition.nutrition %></h3>
+  <h3 class"threadTitle"> Foods, Calories: <br/>
+    <%= nutrition.food1 %> <span class="calorie1"><%= nutrition.nutrition1 %></span><br/>
+  <% if (nutrition.food2 !== '' || nutrition.food2 !== undefined) { %>
+     <%= nutrition.food2 %> <span class="calorie2"><%= nutrition.nutrition2 %></span><br/>
+  <% } %>
+  <% if (nutrition.food3 !== '' || nutrition.food3 !== undefined) { %>
+     <%= nutrition.food3 %> <span class="calorie3"><%= nutrition.nutrition3 %></span><br/>
+  <% } %>
+  <% if (nutrition.food4 !== '' || nutrition.food4 !== undefined) { %>
+     <%= nutrition.food4 %> <span class="calorie4"><%= nutrition.nutrition4 %></span><br/>
+  <% } %>
+  <% if (nutrition.food5 !== '' || nutrition.food5 !== undefined) { %>
+     <%= nutrition.food5 %> <spanclass="calorie5"><%= nutrition.nutrition5 %></span><br/>
+  <% } %>
+  </h3>
   <h5 class="threadDate">Date Created: <%= nutrition.time %></h5>
 </div>
+<h4 class="calorieCount"> Total Calories Consumed: 0 </h4>
+<button type="button" class="btn btn-success" id="updateCalories">Update Calorie Count!</button></br>
 <div>
   <a class="btn btn-warning" href="/day/<%= nutrition._id %>/edit" role="button">Edit this Day</a>
   <form action="/day/<%= nutrition._id %>?_method=DELETE"

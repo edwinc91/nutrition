@@ -1,19 +1,79 @@
 <div id="threadMaking">
 <form action="/day/<%= nutrition._id %>/edit?_method=PATCH" method="post">
-  <div class="form-group">
+  <div class="form-group" id="nutritionForm">
+    <div id="nutritionForm1">
     <label for="threadTitle">Consumed Goods</label>
     <input type="text"
            class="form-control"
            id="threadTitle"
            name="nutrition[food1]"
-           value="<%= nutrition.food %>">
-    <label for="threadBody">Nutrition</label>
+           value="<%= nutrition.food1 %>">
+    <label for="threadBody">Calories</label>
     <input type="text" class="form-control"
               id="threadBody"
               rows="6"
               name="nutrition[nutrition1]"
-              value="<%= nutrition.nutrition %>">
+              value="<%= nutrition.nutrition1 %>">
+    </div>
+  <% if (nutrition.food2 !== undefined){ %>
+    <div id="nutritionForm2">
+  <label for="threadTitle">Consumed Goods 2</label>
+  <input type="text"
+         class="form-control"
+         id="threadTitle"
+         name="nutrition[food2]"
+         value="<%= nutrition.food2 %>">
+  <label for="threadBody">Calories 2</label>
+  <input type="text" class="form-control"
+            id="threadBody"
+            rows="6"
+            name="nutrition[nutrition2]"
+            value="<%= nutrition.nutrition2 %>">
+          </div>
+  <% } %>
+  <% if (nutrition.food3 !== undefined){ %>
+    <label for="threadTitle">Consumed Goods 3</label>
+    <input type="text"
+           class="form-control"
+           id="threadTitle"
+           name="nutrition[food3]"
+           value="<%= nutrition.food3 %>">
+    <label for="threadBody">Calories 3</label>
+    <input type="text" class="form-control"
+              id="threadBody"
+              rows="6"
+              name="nutrition[nutrition3]"
+              value="<%= nutrition.nutrition3 %>">
+    <% } %>
+    <% if (nutrition.food4 !== undefined){ %>
+      <label for="threadTitle">Consumed Goods 4</label>
+      <input type="text"
+             class="form-control"
+             id="threadTitle"
+             name="nutrition[food4]"
+             value="<%= nutrition.food4 %>">
+      <label for="threadBody">Calories 4</label>
+      <input type="text" class="form-control"
+                id="threadBody"
+                name="nutrition[nutrition4]"
+                value="<%= nutrition.nutrition4 %>">
+      <% } %>
+      <% if (nutrition.food5 !== undefined){ %>
+      <label for="threadTitle">Consumed Goods 5</label>
+      <input type="text"
+             class="form-control"
+             id="threadTitle"
+             name="nutrition[food5]"
+             value="<%= nutrition.food5 %>">
+      <label for="threadBody">Calories 5</label>
+      <input type="text" class="form-control"
+                id="threadBody"
+                name="nutrition[nutrition5]"
+                value="<%= nutrition.nutrition5 %>">
+      <% } %>
   </div>
+  <button type="button" class="addFood" class="btn btn-success">Add More Foodies</button>
+  <button type="button" class="removeFood" class="btn btn-failure">Remove Foodies</button>
   <button type="submit" class="btn btn-success">Update your Day!</button>
 </form>
 <h6>
