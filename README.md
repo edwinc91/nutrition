@@ -1,4 +1,4 @@
-# nutrition
+<h2> Nutrition </h2>
 
 I created this app with the thought of having users sign up and using the site to log their daily calorie intakes. After a meal, they can simply log in and post what they ate and how many calories it was(approximately).
 
