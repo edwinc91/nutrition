@@ -2,6 +2,8 @@
 
 I created this app with the thought of having users sign up and using the site to log their daily calorie intakes. After a meal, they can simply log in and post what they ate and how many calories it was(approximately).
 
+Users can go on http://thawing-reaches-4422.herokuapp.com/ to check it out.
+
 As something extra, I want to see if it is possible to incorporate a calorie/food api that can autofill the calories a certain food type is, such as a big mac meal, or a grilled chicken salad. Obviously, the calories won't be exact, as the calories would vary depending on factors such as dressing for a salad, or the way it is cooked, however I feel like it would be cool to have something that could approximate the calories something is. That way, it can give users an idea of what to put down.
 
 Another cool feature I would like to incorporate is a place/forum where users can share their data and get feedback from/give inspiration to other users.
